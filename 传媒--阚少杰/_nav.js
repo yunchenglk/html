@@ -1,0 +1,12 @@
+﻿document.writeln("<div class=\'index-nav \' data-am-sticky>");
+document.writeln("    <ul class=\'box\'>");
+document.writeln("        <li><a href=\'index.html\'>首页</a></li>");
+document.writeln("        <li><a href=\'tv.html\'>电视</a></li>");
+document.writeln("        <li><a href=\'net.html\'>网络</a></li>");
+document.writeln("        <li><a href=\'huwai.html\'>户外</a></li>");
+document.writeln("        <li><a href=\'jingbiao.html\'>竞标</a></li>");
+document.writeln("        <li><a href=\'yiren.html\'>艺人</a></li>");
+document.writeln("        <li><a href=\'\'>媒体金融</a></li>");
+document.writeln("        <li><a href=\'zhiru.html\'>植入</a></li>");
+document.writeln("    </ul>");
+document.writeln("</div>");

@@ -1,0 +1,109 @@
+﻿<script src="_top.js"></script>
+<!--导航栏部分-->
+<script src="_nav.js"></script>
+<!--图片轮播banner-->
+<script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
+ <script>
+	$(function(){
+	   var data = $.GetApiData(apiurl + "/News/"+urlitems.index_banner+"?type=0&count=5");
+	    console.log(data.data);
+	   var mytemplate=Handlebars.compile($('#banner_tem').html());
+		$('#banner_list').html(mytemplate(data.data));
+	  })
+	
+	</script>
+<div class="index-banner" data-am-scrollspy="{animation: 'fade', delay: 300}">
+
+    <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{}'>
+        <ul class="am-slides"  id="banner_list">
+           <script id='banner_tem' type='text/x-handbars-template'>
+		   {{#each this}}
+            <li>
+                <img src="{{SlidePicStr}}">
+            </li>
+			{{/each}}
+			</script>
+        </ul>
+    </div>
+
+</div>
+<!--内容一-->
+<div class="box">
+    <div class="index-content box">
+        <div class="index-content-title">
+            今日焦点
+            <p>
+                ——FOCUS——
+            </p>
+        </div>
+        <div class="index-content-body index-content-focus">
+            <div class="index-content-body-item"><img src="img/0001.jpg" alt="">
+                <p class="index-content-body-item-title">品牌策划</p>
+                <p class="index-content-body-item-price">套餐价：<span>5800</span></p>
+                <p class="index-content-body-item-lineheight">
+                    企业品牌策划思想战略企业品牌由于其信誉高，销量大，附加值高，可以使企业加速资金周转，获得高额利润。因此，企业品牌战...</p><a href="detail.html"
+                                                                                       class="btn buy">我要购买</a>
+            </div>
+            <div class="index-content-body-item"><img src="img/0002.jpg" alt="">
+                <p class="index-content-body-item-title">影视制作</p>
+                <p class="index-content-body-item-price">套餐价：<span>5800</span></p>
+                <pclass
+                ="index-content-body-item-lineheight">电影电视媒体已经成为当前最为大众化，最具影响力的媒体型式。从好莱坞电影所创造的幻想世界，到电视新闻所关注的现实生活...</p><a
+                        href="detail.html" class="btn buy">我要购买</a>
+            </div>
+            <div class="index-content-body-item"><img src="img/0003.jpg" alt="">
+                <p class="index-content-body-item-title">公关活动</p>
+                <p class="index-content-body-item-price">套餐价：<span>5800</span></p>
+                <pclass
+                ="index-content-body-item-lineheight">公关活动特别是大型公关活动往往耗费很多人力、物力、财力资源。一个新产品在中心城市的上市传播费用，一般都在百万元以上...</p><a
+                        href="detail.html" class="btn buy">我要购买</a>
+            </div>
+            <div class="index-content-body-item"><img src="img/0004.jpg" alt="">
+                <p class="index-content-body-item-title">商业摄影</p>
+                <p class="index-content-body-item-price">套餐价：<span>5800</span></p>
+                <pclass
+                ="index-content-body-item-lineheight">商业摄影所包含的范围是非常广泛的，甚至说包括在各种行业中，其中最明显的具有商业摄影性质的是产品摄影、广告摄影、人像...</p><a
+                        href="detail.html" class="btn buy">我要购买</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--内容二-->
+<div class="box">
+    <div style="clear: both;height: 20px"></div>
+    <div class="index-content-title">
+        我们的产品
+        <p>
+            ——PRODUCT——
+        </p>
+    </div>
+    <div class="index-content box">
+        <div class="index-product">
+            <div class="index-product-w">
+                <div class="index-content-product-title">产品宣传影视制作</div>
+                <div class="index-content-product-datail">用视觉传播塑造企业形象，专业的影视制作团队，众多
+                    的成功案例见证，创意思维+高效执行
+                </div>
+                <div class="index-content-product-bnt"><input type="submit" value="了解详情" class="btn index-datial"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容三-->
+<div class="box">
+    <div style="clear: both;height: 20px"></div>
+    <div class="index-content box">
+        <div class="index-product-r">
+            <div class="index-product-w-r">
+                <div class="index-content-product-title">企业的视觉品牌管家</div>
+                <div class="index-content-product-datail">用视觉传播塑造企业形象，专业的影视制作团队，众多
+                    的成功案例见证
+                </div>
+                <div class="index-content-product-bnt"><input type="submit" value="了解详情" class="btn index-datial"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<script src="_footer.js"></script>
